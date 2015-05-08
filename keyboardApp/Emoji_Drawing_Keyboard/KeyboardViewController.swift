@@ -18,7 +18,8 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
     
     //view vars for master view manipulation
     var customInterface: UIView!
-    var uploadState = true
+    var uploadState = false
+    var uploadCount = 0
     
     //drawing vars for drawing configurations
     var lastPoint = CGPoint.zeroPoint
@@ -117,12 +118,11 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
     }
     
     @IBAction func uploadPressed(sender: AnyObject) {
-        if uploadState == true {
-             upload.tintColor = UIColor(red:29.0/255.0, green:158.0/255.0, blue:253.0/255.0, alpha:1.0)
+        if self.uploadState == true {
+            upload.tintColor = UIColor.grayColor()
             uploadState = false
         }else{
-            upload.tintColor = UIColor.grayColor()
-           
+            upload.tintColor = UIColor(red:29.0/255.0, green:158.0/255.0, blue:253.0/255.0, alpha:1.0)
             uploadState = true
         }
     }
@@ -225,9 +225,26 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
                     
                     let predictionLabelText = jsonDictionary.valueForKey("prediction") as! String
                     var myIcons = predictText[predictionLabelText]!
+                    let probs = jsonDictionary.valueForKey("prob") as! Float
+                    NSLog(String(stringInterpolationSegment: probs))
+                    
+                    
+                    if(probs > 0.75 && self.uploadState){
+                        let image = self.getDrawing()
+                        self.sendFeatureDrawing(image, label: predictionLabelText)
+                        self.uploadCount++
+                        if(self.uploadCount > 20){
+                            self.uploadCount = 0
+                            self.updateModel()
+                        }
+                        
+                    }
+
+                    
                     
                     //changing our UI on the main thread
                     dispatch_async(dispatch_get_main_queue(),{
+                        self.buttonScroll.subviews.map({ $0.removeFromSuperview() })
                         let scrollingView = self.emojiButtonsView(CGSizeMake(40.0, 40.0), icons: myIcons)
                         self.buttonScroll.contentSize = scrollingView.frame.size
                         self.buttonScroll.addSubview(scrollingView)
@@ -248,6 +265,84 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
         
         postTask.resume() // start the task
         
+        
+    }
+    
+    
+    func updateModel(){
+        //setting up our URL
+        let baseURL = "\(SERVER_URL)/UpdateModel?dsid=\(Int(1))&option=\(Int(1))&kNeighbors=\(Int(1))"
+        let getUrl = NSURL(string: "\(baseURL)")
+        
+        print(getUrl)
+        
+        // create a custom HTTP GET request
+        var request = NSMutableURLRequest(URL: getUrl!)
+        
+        let dataTask : NSURLSessionDataTask = self.session.dataTaskWithRequest(request,
+            completionHandler:{(data, response, error) in
+                if(response != nil){
+                    //unpacking needed data
+                    NSLog("Response:\n%@",response)
+                    var jsonError: NSError?
+                    var jsonDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as! NSDictionary
+                    print(jsonDictionary)
+                    
+                    
+                    
+                }else{
+                    dispatch_async(dispatch_get_main_queue(),{
+                        NSLog("NO SERVER RESPONSE")
+                    })
+                }
+        })
+        
+        dataTask.resume() // start the task
+        
+    }
+    
+    func sendFeatureDrawing(drawing: UIImage, label: String) {
+        
+        //setting up our URL
+        let baseURL = "\(SERVER_URL)/AddDataPoint"
+        let postUrl = NSURL(string: "\(baseURL)")
+        
+        //resize the image and encode it into a .png
+        let imageData: NSData = UIImagePNGRepresentation(RBResizeImage(drawing, scaleFactor: 0.5))
+        let imageData2: String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        
+        //create our dictionary to upload our feature data with
+        let jsonUpload: NSDictionary = ["feature": imageData2, "label": label,"dsid":1]
+        //turn our dictionary into a json object
+        var jsonError: NSError? = nil
+        var requestBody:NSData? = NSJSONSerialization.dataWithJSONObject(jsonUpload, options:NSJSONWritingOptions.PrettyPrinted, error:&jsonError);
+        
+        // create a custom HTTP POST request
+        var request = NSMutableURLRequest(URL: postUrl!)
+        
+        request.HTTPMethod = "POST"
+        request.HTTPBody = requestBody
+        
+        let postTask : NSURLSessionDataTask = self.session.dataTaskWithRequest(request,
+            completionHandler:{(data, response, error) in
+                if((response) != nil){
+                    //unpacking needed data
+                    NSLog("Response:\n%@",response)
+                    
+                    
+                    var jsonError: NSError?
+                    var jsonDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as! NSDictionary
+                    
+                    NSLog("\n\nJSON Data:\n%@",jsonDictionary)
+                    
+                }else{
+                    dispatch_async(dispatch_get_main_queue(),{
+                        NSLog("CANNOT CONNECT TO SERVER")
+                    })
+                }
+        })
+        
+        postTask.resume() // start the task
         
     }
     
