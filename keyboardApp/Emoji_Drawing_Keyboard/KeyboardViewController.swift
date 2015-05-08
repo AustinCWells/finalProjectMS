@@ -63,6 +63,9 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
         
         self.lastPoint = CGPoint.zeroPoint
         
+        // set upload button
+
+       
         
         //connecting to our server
         var sessionConfig = NSURLSessionConfiguration.ephemeralSessionConfiguration()
@@ -115,10 +118,11 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
     
     @IBAction func uploadPressed(sender: AnyObject) {
         if uploadState == true {
-            upload.tintColor = UIColor.grayColor()
+             upload.tintColor = UIColor(red:29.0/255.0, green:158.0/255.0, blue:253.0/255.0, alpha:1.0)
             uploadState = false
         }else{
-            upload.tintColor = UIColor.blueColor()
+            upload.tintColor = UIColor.grayColor()
+           
             uploadState = true
         }
     }
@@ -233,6 +237,9 @@ class KeyboardViewController: UIInputViewController, NSURLSessionDelegate {
                     dispatch_async(dispatch_get_main_queue(),{
                         //set a no connection icon since we did not get a response form the server
                         NSLog("NO RESPONSE FROM THE SERVER")
+                        let image = UIImage(named: "oops.png")
+                        self.drawingView.image = image
+                        
                     })
                 }
                 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -17,48 +17,59 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="10" image="drawhere.png" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-WQ-KCP">
+                    <rect key="frame" x="76" y="-3" width="171" height="171"/>
+                    <color key="backgroundColor" red="0.67718199587831596" green="0.67718199587831596" blue="0.67718199587831596" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoA-Rz-qty">
+                    <rect key="frame" x="73" y="-3" width="173" height="171"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03x-ko-ZQ2">
+                    <rect key="frame" x="254" y="1" width="66" height="171"/>
+                </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ASo-gw-xzR">
+                    <rect key="frame" x="27" y="14" width="20" height="146"/>
+                </imageView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-FG-KhY">
                     <rect key="frame" x="0.0" y="172" width="320" height="44"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <items>
-                        <barButtonItem tag="4" title="   &lt;   " id="ra8-ar-nR2">
+                        <barButtonItem tag="4" image="keyboard.png" id="ra8-ar-nR2">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="prevKeyboardPress:" destination="-1" id="8yG-px-kOP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="UP?" width="42" style="plain" id="Whq-ZY-6N3">
+                        <barButtonItem image="cloud_off.png" width="42" style="plain" id="Whq-ZY-6N3">
+                            <inset key="imageInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="uploadPressed:" destination="-1" id="wTw-WV-Itv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem tag="5" title="SPACEBAR" width="105" style="plain" id="hJv-CJ-pSq">
+                        <barButtonItem tag="5" image="spacebar.png" width="145" style="plain" id="hJv-CJ-pSq">
+                            <inset key="imageInsets" minX="-9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="spacePress:" destination="-1" id="cWF-eh-k5f"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="clear" style="plain" id="kFh-ov-P0T">
+                        <barButtonItem image="clear.png" style="plain" id="kFh-ov-P0T">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="clearPressed:" destination="-1" id="F3X-Gh-saM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem tag="6" title="  &lt;-  " style="plain" id="hKs-4p-jI4">
+                        <barButtonItem tag="6" image="delete.png" style="plain" id="hKs-4p-jI4">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="backspacePress:" destination="-1" id="Wm6-ZS-u59"/>
                             </connections>
                         </barButtonItem>
                     </items>
                 </toolbar>
-                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="10" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-WQ-KCP">
-                    <rect key="frame" x="75" y="1" width="171" height="171"/>
-                    <color key="backgroundColor" red="0.67718199587831596" green="0.67718199587831596" blue="0.67718199587831596" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoA-Rz-qty">
-                    <rect key="frame" x="75" y="1" width="173" height="171"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
-                </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03x-ko-ZQ2">
-                    <rect key="frame" x="254" y="1" width="66" height="171"/>
-                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -70,4 +81,13 @@
             <point key="canvasLocation" x="520" y="469"/>
         </view>
     </objects>
+    <resources>
+        <image name="clear.png" width="20" height="20"/>
+        <image name="cloud_off.png" width="33" height="20"/>
+        <image name="delete.png" width="24" height="20"/>
+        <image name="drawhere.png" width="175" height="175"/>
+        <image name="keyboard.png" width="21" height="20"/>
+        <image name="logo.png" width="136" height="852"/>
+        <image name="spacebar.png" width="120" height="24"/>
+    </resources>
 </document>

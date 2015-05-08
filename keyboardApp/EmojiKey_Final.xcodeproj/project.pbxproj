@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3995351AFC53450035B0C5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E3995341AFC53450035B0C5 /* logo.png */; };
+		5EB40EC21AFC122500C9FC03 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EBD1AFC122500C9FC03 /* clear.png */; };
+		5EB40EC31AFC122500C9FC03 /* cloud_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EBE1AFC122500C9FC03 /* cloud_off.png */; };
+		5EB40EC51AFC122500C9FC03 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EC01AFC122500C9FC03 /* delete.png */; };
+		5EB40EC61AFC122500C9FC03 /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EC11AFC122500C9FC03 /* keyboard.png */; };
+		5EB40ECA1AFC1A5D00C9FC03 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EBD1AFC122500C9FC03 /* clear.png */; };
+		5EB40ECC1AFC1A7B00C9FC03 /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EC11AFC122500C9FC03 /* keyboard.png */; };
+		5EB40ECD1AFC1A7F00C9FC03 /* cloud_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EBE1AFC122500C9FC03 /* cloud_off.png */; };
+		5EB40ECE1AFC1A8300C9FC03 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EC01AFC122500C9FC03 /* delete.png */; };
+		5EB40ED41AFC1CB600C9FC03 /* spacebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40ED31AFC1CB600C9FC03 /* spacebar.png */; };
+		5EB40EDE1AFC20E900C9FC03 /* drawhere.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EDD1AFC20E900C9FC03 /* drawhere.png */; };
+		5EB40EE21AFC23AF00C9FC03 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EE11AFC23AF00C9FC03 /* logo.png */; };
+		5EB40EE41AFC266F00C9FC03 /* cloud_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EE31AFC266F00C9FC03 /* cloud_on.png */; };
+		5EB40EEA1AFC2C9300C9FC03 /* oops.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB40EE91AFC2C9300C9FC03 /* oops.png */; };
 		976189C51AFBE8F500E1FA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976189C41AFBE8F500E1FA15 /* AppDelegate.swift */; };
 		976189C71AFBE8F500E1FA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976189C61AFBE8F500E1FA15 /* ViewController.swift */; };
 		976189CA1AFBE8F500E1FA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976189C81AFBE8F500E1FA15 /* Main.storyboard */; };
@@ -50,6 +64,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E3995341AFC53450035B0C5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5EB40EBD1AFC122500C9FC03 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
+		5EB40EBE1AFC122500C9FC03 /* cloud_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_off.png; sourceTree = "<group>"; };
+		5EB40EC01AFC122500C9FC03 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		5EB40EC11AFC122500C9FC03 /* keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard.png; sourceTree = "<group>"; };
+		5EB40ED31AFC1CB600C9FC03 /* spacebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spacebar.png; sourceTree = "<group>"; };
+		5EB40EDD1AFC20E900C9FC03 /* drawhere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawhere.png; sourceTree = "<group>"; };
+		5EB40EE11AFC23AF00C9FC03 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5EB40EE31AFC266F00C9FC03 /* cloud_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_on.png; sourceTree = "<group>"; };
+		5EB40EE91AFC2C9300C9FC03 /* oops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oops.png; sourceTree = "<group>"; };
 		976189BF1AFBE8F500E1FA15 /* EmojiKey_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiKey_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		976189C31AFBE8F500E1FA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		976189C41AFBE8F500E1FA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +115,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EB40EC81AFC123E00C9FC03 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5EB40EE91AFC2C9300C9FC03 /* oops.png */,
+				5EB40EE31AFC266F00C9FC03 /* cloud_on.png */,
+				5E3995341AFC53450035B0C5 /* logo.png */,
+				5EB40EE11AFC23AF00C9FC03 /* logo.png */,
+				5EB40EDD1AFC20E900C9FC03 /* drawhere.png */,
+				5EB40ED31AFC1CB600C9FC03 /* spacebar.png */,
+				5EB40EBD1AFC122500C9FC03 /* clear.png */,
+				5EB40EBE1AFC122500C9FC03 /* cloud_off.png */,
+				5EB40EC01AFC122500C9FC03 /* delete.png */,
+				5EB40EC11AFC122500C9FC03 /* keyboard.png */,
+			);
+			name = images;
+			path = ../EmojiKey_Final;
+			sourceTree = "<group>";
+		};
 		976189B61AFBE8F500E1FA15 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +194,7 @@
 		976189E91AFBE94C00E1FA15 /* Emoji_Drawing_Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				5EB40EC81AFC123E00C9FC03 /* images */,
 				976189EC1AFBE94C00E1FA15 /* KeyboardViewController.swift */,
 				976189F71AFBE99200E1FA15 /* CustomKeyboard.xib */,
 				976189EA1AFBE94C00E1FA15 /* Supporting Files */,
@@ -270,9 +313,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB40EC61AFC122500C9FC03 /* keyboard.png in Resources */,
 				976189CA1AFBE8F500E1FA15 /* Main.storyboard in Resources */,
 				976189CF1AFBE8F500E1FA15 /* LaunchScreen.xib in Resources */,
 				976189CC1AFBE8F500E1FA15 /* Images.xcassets in Resources */,
+				5EB40EC31AFC122500C9FC03 /* cloud_off.png in Resources */,
+				5EB40EC51AFC122500C9FC03 /* delete.png in Resources */,
+				5EB40EC21AFC122500C9FC03 /* clear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +334,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB40ECE1AFC1A8300C9FC03 /* delete.png in Resources */,
+				5EB40EDE1AFC20E900C9FC03 /* drawhere.png in Resources */,
+				5E3995351AFC53450035B0C5 /* logo.png in Resources */,
+				5EB40EE21AFC23AF00C9FC03 /* logo.png in Resources */,
+				5EB40ECD1AFC1A7F00C9FC03 /* cloud_off.png in Resources */,
+				5EB40EE41AFC266F00C9FC03 /* cloud_on.png in Resources */,
+				5EB40ECC1AFC1A7B00C9FC03 /* keyboard.png in Resources */,
+				5EB40EEA1AFC2C9300C9FC03 /* oops.png in Resources */,
+				5EB40ED41AFC1CB600C9FC03 /* spacebar.png in Resources */,
+				5EB40ECA1AFC1A5D00C9FC03 /* clear.png in Resources */,
 				976189F81AFBE99200E1FA15 /* CustomKeyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +593,7 @@
 				976189E01AFBE8F500E1FA15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		976189E11AFBE8F500E1FA15 /* Build configuration list for PBXNativeTarget "EmojiKey_FinalTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +602,7 @@
 				976189E31AFBE8F500E1FA15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		976189F11AFBE94C00E1FA15 /* Build configuration list for PBXNativeTarget "Emoji_Drawing_Keyboard" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +611,7 @@
 				976189F31AFBE94C00E1FA15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C1DAFE87-2DA5-43DE-8D32-2AAD7B69B928</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EmojiKey_Final</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B50809F2860DB9689D18638000FA3AC6919C7E6C</key>
+		<string>github.com:AustinCWells/finalProjectMS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>keyboardApp/EmojiKey_Final.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B50809F2860DB9689D18638000FA3AC6919C7E6C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:AustinCWells/finalProjectMS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B50809F2860DB9689D18638000FA3AC6919C7E6C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B50809F2860DB9689D18638000FA3AC6919C7E6C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>finalProjectMS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

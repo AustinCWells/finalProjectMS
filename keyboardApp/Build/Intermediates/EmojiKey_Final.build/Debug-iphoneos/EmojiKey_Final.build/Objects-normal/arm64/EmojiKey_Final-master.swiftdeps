@@ -1,0 +1,5 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.49.6 clang-602.0.49)"
+options: "769513b5fa06197dd1d09f904ba95abf"
+inputs: 
+- "/Users/austinwells/Desktop/new/finalProjectMS/keyboardApp/EmojiKey_Final/ViewController.swift"
+- "/Users/austinwells/Desktop/new/finalProjectMS/keyboardApp/EmojiKey_Final/AppDelegate.swift"
